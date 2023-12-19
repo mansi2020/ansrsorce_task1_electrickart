@@ -71,23 +71,25 @@ highToLow.addEventListener("click", (e) => {
 
 //filter data according discount
 let inputs = document.querySelectorAll(".dicount-category input");
-var selectedValArrr = [];
 function filterValueAccordingDiscount(e) {
-  if (e.target.checked) {
-    selectedValArrr.push(e.target.value);
-  } else {
-    selectedValArrr = selectedValArrr.filter((val) => val != e.target.value);
-  }
   console.log(selectedValArrr);
   let filterArr = products.filter((el) => {
-    return selectedValArrr.join(",").includes(el.discountPrice.toString());
+    let discountPercentage = Math.round(100-(el.specialPrice/el.price)*(100));
+    console.log(discountPercentage);
+    return discountPercentage >= e.target.value;
   });
 
-  product_container.innerHTML = "";
-  if (selectedValArrr.length > 0) {
+  if(filterArr.length>0){
+    product_container.innerHTML = "";
     addProducts(filterArr);
-  } else {
-    addProducts(products);
+    
+  }else{
+    product_container.innerHTML = "No dicount Available";
+    product_container.style.display = "flex";
+    product_container.style.justifyContent = "center";
+    product_container.style.alignItems = "center";
+    product_container.style.height = "80%";
+      // addProducts(products);
   }
 }
 inputs.forEach((checkbox) => {
