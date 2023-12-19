@@ -1,4 +1,3 @@
-
 //<------------------display product to ui----------->
 
 let product_container = document.querySelector(".products_container");
@@ -73,22 +72,22 @@ highToLow.addEventListener("click", (e) => {
 let inputs = document.querySelectorAll(".dicount-category input");
 function filterValueAccordingDiscount(e) {
   let filterArr = products.filter((el) => {
-    let discountPercentage = Math.round(100-(el.specialPrice/el.price)*(100));
-    console.log(discountPercentage);
+    let discountPercentage = Math.round(
+      100 - (el.specialPrice / el.price) * 100
+    );
     return discountPercentage >= e.target.value;
   });
 
-  if(filterArr.length>0){
+  if (filterArr.length > 0) {
     product_container.innerHTML = "";
     addProducts(filterArr);
-    
-  }else{
+  } else {
     product_container.innerHTML = "No dicount Available";
     product_container.style.display = "flex";
     product_container.style.justifyContent = "center";
     product_container.style.alignItems = "center";
     product_container.style.height = "80%";
-      // addProducts(products);
+    // addProducts(products);
   }
 }
 inputs.forEach((checkbox) => {
@@ -100,7 +99,6 @@ inputs.forEach((checkbox) => {
 //filter data according offers
 let offerInputs = document.querySelector(".offers-category input");
 offerInputs.addEventListener("change", (e) => {
-  console.log(e.target);
   product_container.innerHTML = "";
   if (e.target.checked) {
     let filterArr = products.filter((el) => {
@@ -121,7 +119,6 @@ function filterValueAccordingRating(e) {
   } else {
     ratingValArr = ratingValArr.filter((val) => val != e.target.value);
   }
-  console.log(ratingValArr);
   let filterArr = products.filter((el) => {
     return ratingValArr.join(",").includes(Math.floor(el.rating).toString());
   });
@@ -201,12 +198,14 @@ document.querySelector("#signup_left_signin").addEventListener("click", (e) => {
 });
 
 // click sign in pags's sign up  button to show sign up page
-document.querySelector("#signup_right_signin").addEventListener("click", (e) => {
-  signUpContainer.style.display = "flex";
-  signInContainer.style.display = "none";
-  mainBodyContainer.style.display = "none";
-  mainsignUpsignInConatiner.style.display = "flex";
-});
+document
+  .querySelector("#signup_right_signin")
+  .addEventListener("click", (e) => {
+    signUpContainer.style.display = "flex";
+    signInContainer.style.display = "none";
+    mainBodyContainer.style.display = "none";
+    mainsignUpsignInConatiner.style.display = "flex";
+  });
 
 // sign up => add user data
 let i = 0;
@@ -231,7 +230,6 @@ document.querySelector("#signUpBtn").addEventListener("click", (e) => {
     document.querySelector(
       ".profile-button p"
     ).innerHTML = `${userDataObj.userName}`;
-    console.log(dataArr);
 
     // only show sign up page
     warning[0].style.display = "none";
@@ -240,12 +238,11 @@ document.querySelector("#signUpBtn").addEventListener("click", (e) => {
     mainBodyContainer.style.display = "flex";
   }
 
-  userName.value="";
-  email[0].value="";
-  password[0].value="";
+  userName.value = "";
+  email[0].value = "";
+  password[0].value = "";
 });
 
-console.log(dataArr);
 // sign in => add user data
 document.querySelector("#signInBtn").addEventListener("click", (e) => {
   e.preventDefault();
@@ -253,10 +250,7 @@ document.querySelector("#signInBtn").addEventListener("click", (e) => {
     let storeData = JSON.parse(localStorage.getItem("data"));
 
     // condition for all input
-    if (
-      email[1].value == "" ||
-      password[1].value == ""
-    ) {
+    if (email[1].value == "" || password[1].value == "") {
       warning[1].style.display = "block";
     } else {
       warning[1].style.display = "none";
@@ -268,9 +262,7 @@ document.querySelector("#signInBtn").addEventListener("click", (e) => {
           // add profile button on nav
           document.querySelector(".login-button").style.display = "none";
           document.querySelector(".profile-button p").style.diplay = "block";
-          document.querySelector(
-            ".profile-button p"
-          ).innerHTML = "Profile";
+          document.querySelector(".profile-button p").innerHTML = "Profile";
 
           // only show sign in page
           warning[1].style.display = "none";
@@ -278,7 +270,7 @@ document.querySelector("#signInBtn").addEventListener("click", (e) => {
           profileBtn.style.display = "flex";
           mainBodyContainer.style.display = "flex";
           document.querySelector(".userNotFound").style.display = "none";
-        }else{
+        } else {
           document.querySelector(".userNotFound").style.display = "block";
         }
       });
@@ -286,22 +278,22 @@ document.querySelector("#signInBtn").addEventListener("click", (e) => {
   }
 });
 
-// onclick on menu bar 
+// onclick on menu bar
 let menubar = document.querySelector("#menu");
 let asideMenu = document.querySelector(".sidebar-divs-container");
 let closeBtn = document.querySelector("#closeBtn");
-menubar.addEventListener("click", (e)=>{
+menubar.addEventListener("click", (e) => {
   asideMenu.style.display = "block";
   asideMenu.style.transition = "all 0.2s linear";
-  asideMenu.style.position = "absolute"
+  asideMenu.style.position = "absolute";
   asideMenu.style.left = "0";
   closeBtn.style.display = "block";
-})
+});
 
-// onclick on closeBtn 
-closeBtn.addEventListener("click", closeAside)
+// onclick on closeBtn
+closeBtn.addEventListener("click", closeAside);
 function closeAside() {
-  asideMenu.style.transition = "all 0.2s linear"
-  asideMenu.style.left = "-280px"
-  closeBtn.style.display = "none"
+  asideMenu.style.transition = "all 0.2s linear";
+  asideMenu.style.left = "-280px";
+  closeBtn.style.display = "none";
 }

@@ -27,7 +27,6 @@ button {
 
 /* navbar */
 nav {
-  /* height: 70px; */
   padding: 20px;
   background-color: #6428f0;
   color: white;
@@ -500,7 +499,7 @@ input:focus {
   }
 }
 
-/*<------------------------------------media query for mediuam device------------------------------> */
+/*<------------------------------------media query for mediuam desktop device------------------------------> */
 @media screen and (min-width: 768px) and (max-width: 1025px) {
   /* nav */
   body {
@@ -544,12 +543,12 @@ input:focus {
   }
 }
 
-/*<------------------------------------media query for small device------------------------------> */
-@media screen and (min-width:1024px) {
-  nav{
-    gap:30px;
+/*<------------------------------------media query for large desktop device------------------------------> */
+@media screen and (min-width: 1024px) {
+  nav {
+    gap: 30px;
   }
-  #menu{
-    display:none;
+  #menu {
+    display: none;
   }
 }
