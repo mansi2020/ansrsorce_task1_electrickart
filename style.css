@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+:root{
+  --grey-color : rgb(202, 202, 202);
+  --blue-color : #6428f0;
+  --white-color : #fff;
+  --lightblue-color : #6428f0;
+  --dark-grey-color:rgb(133, 133, 133);
+  --green-color : #B4F028;
+  --orange-color : #FB641B;
+}
+body {
+  background-color: #eff1f4;
+}
+
+button{
+  cursor: pointer;
+}
+
+/* navbar */
+nav {
+  height:80px;
+  padding: 0 20px;
+  background-color: #6428f0;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  box-shadow: 2px 1px 20px var(--dark-grey-color);
+}
+
+.logo {
+  /* width:fit-content; */
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  /* height:50px; */
+  cursor: pointer;
+}
+.logo span img {
+  height: 10px;
+  width: auto;
+}
+.logo>h1{
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 900;
+}
+.flipcart-name-icon {
+  height: 25px;
+  width: auto;
+}
+.logo span {
+  color: yellow;
+  font-size: 12px;
+  text-decoration: none;
+  font-style: italic;
+}
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.searchbox {
+  background-color: white;
+  padding: 9px;
+}
+.searchbox input {
+  border: none;
+  outline: none;
+  width: 500px;
+}
+.searchbox i {
+  color: #2874f0;
+}
+.login-button {
+  background: white;
+  padding: 10px 35px;
+  color: #2874f0;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.product_category_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  background-color: white;
+}
+.category-item {
+  color: black;
+  font-size: 14px;
+  margin: 10px 20px;
+  font-weight: 500;
+  line-height: 19.6px;
+  background-color: white;
+}
+.main-body-container {
+  display: flex;
+  /* padding: 20px; */
+  gap: 12px;
+  width: 100%;
+  margin-top: 90px;
+  height:calc(100vh - 60px);
+}
+
+.sidebar-divs-container {
+  width: 18%;
+  background-color: white;
+  padding: 12px;
+  height:100%;
+}
+.main-content-container {
+  width: 81%;
+  background: white;
+  padding: 12px;
+  height:100%;
+  overflow: auto;
+}
+
+.home-computers {
+  color: #878787;
+  font-size: 12px;
+  line-height: 17.9px;
+  border-bottom: 1px solid #e0dfdf;
+}
+.home-computers a {
+  text-decoration: none;
+  color: #878787;
+}
+.sort-by {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #212121;
+  margin: 5px 0;
+}
+/* .sort-by:hover{
+  text-decoration: none;
+  color:var(--blue-color);
+} */
+.sort-by-name {
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+  display: block;
+}
+.products_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.product_card {
+  display: flex;
+  flex-direction: column;
+  width: 24.5%;
+  object-fit: cover;
+  padding: 20px;
+  gap: 2px;
+  /* box-shadow: 1px 1px 3px rgb(200, 199, 199); */
+}
+.product_card img {
+  width: 90%;
+  height: 60%;
+  align-self: center;
+  padding: 20px1-px;
+}
+.product_name {
+  font-size: 14px;
+  color: #212121;
+  line-height: 19.6px;
+}
+.color {
+  color: #878787;
+  font-size: 12px;
+}
+.rating {
+  color: white;
+  background-color: green;
+  padding: 2px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.product_card div img {
+  height: 20px;
+  width: auto;
+  padding: 0;
+}
+.product_card div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.special_price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #212121;
+}
+.original_price {
+  color: #878787;
+  text-decoration: line-through;
+  font-size: 14px;
+  font-weight: 400;
+}
+.discount {
+  font-size: 14px;
+  color: green;
+}
+.delivery {
+  font-size: 12px;
+  color: #212121;
+}
+.offers {
+  color: #26a541;
+  font-size: 14px;
+  font-weight: 700;
+}
+.sponsered {
+  color: #878787;
+  font-size: 13px;
+}
+.product_card .rating-container img {
+  display: none;
+}
+.fliter-heading {
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #212121;
+}
+.filter-category-head {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+article {
+  display: flex;
+  flex-direction: column;
+}
+.inputs {
+  font-size: 14px;
+  color: #212121;
+  line-height: 14px;
+  padding: 10px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.inputs i {
+  font-size: 8px;
+}
+input {
+  border-radius: 0px;
+}
+.flipcart_assured {
+  height: 30px;
+  width: auto;
+}
+.filter > div {
+  padding: 12px 5px;
+  border-bottom: 1px solid #e0dfdf;
+}
+.sort-by span{
+    transition: 0.3s;
+    font-weight: 500;
+}
+.sort-by span:hover{
+    color:var(--blue-color);
+    cursor: pointer;
+    text-decoration: underline;
+}
+.display-div{
+  display:unset;
+}
+.category-item:hover{
+  color:#2874f0;
+  font-weight: 600;
+}
+
+/* <--------------------------sign in and sign up section --------------------------------------------------->*/
+.signup_signin_container{
+    height:calc(100vh - 80px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_container{
+    margin-top: 80px;
+    display:flex;
+    max-width: 768px;
+    height:70vh;
+    box-shadow: 2px 2px 12px var(--grey-color);
+}
+
+/* form style */
+.form_container{
+    width:50%;
+}
+
+/* sign up page style */
+.form_container_left{
+    color:var(--white-color);
+    background-color:var(--lightblue-color);
+}
+.form_container_left{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:30px;
+    text-align: center;
+    gap:2rem;
+}
+#signin_left_btn{
+    padding:0.7rem 4rem;
+    border:2px solid var(--white-color);
+    background-color: transparent;
+    color:var(--white-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+.form_container_left p{
+  font-weight: 500;
+}
+.form_container_left h1{
+  font-size: 2rem;
+}
+.form_container_right{
+  background-color: var(--white-color);
+}
+.form_container_right form{
+  height:100%;
+  padding:2.2rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
+}
+#signup_illu{
+  width:250px;
+}
+.form_container_right form h1{
+  font-size: 2.5rem;
+}
+.form_container_right form>div>input{
+    padding:10px;
+    width:100%;
+    margin-bottom: 1.5rem;
+    border-radius: 0.4rem;
+    border:none;
+    background-color: #e7e7e7;
+}
+#signUpBtn,#signInBtn{
+  background-color: var(--orange-color);
+  color:var(--white-color);
+  border:none;
+  transition: all 0.5s ease-in-out;
+}
+#signup_left_signin,#signup_right_signin{
+  background-color: transparent;
+  border:2px solid #fff;
+  color:#fff;
+  transition: all 0.5s ease-in-out;
+}
+
+#signup_left_signin:hover,#signup_right_signin:hover{
+  background-color: #fff;
+  color:var(--blue-color);
+}
+
+#signup_left_signin,#signUpBtn,#signInBtn,#signup_right_signin{
+  padding:0.8rem 4rem;
+  border-radius: 0.3rem;
+  font-size:0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#signUpBtn:hover,#signInBtn:hover{
+  box-shadow: 2px 2px 10px grey;
+}
+input:focus{
+  outline:none;
+  border:0.5px solid grey;
+}
+.profile-button{
+  display:flex;
+  color:var(--white-color);
+  background-color: transparent;
+  border:none;
+  gap:0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  align-items: center;
+  display: none;
+}
+.fa-angle-down{
+  font-size: 0.8rem;
+}
+
+/* warning */
+.warning,.userNotFound{
+  color:red;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display:none;
+}
+
+/* <------------------------------sign in --------------------------------------------------------> */
+.form_container_right p{
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+
+/* default display: none container */
+#signInContainer,#signupMainContainer,.signup_signin_container{
+  display:none;
+}
+
+/*<--------------------------------- footer ----------------------------->*/
+.footer {
+  background-color: #212121; /* Flipkart's primary color */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top:1rem;
+}
+
+.footer_links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.footer_link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer_link:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 15px;
+  font-size: 12px;
+}
