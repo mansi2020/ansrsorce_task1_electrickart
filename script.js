@@ -1,7 +1,8 @@
-// <------------------------------------------------------------------------------------------
+
+//<------------------display product to ui----------->
+
 let product_container = document.querySelector(".products_container");
 
-// ! add product to container
 function addProducts(produ) {
   produ.forEach((product) => {
     let product_card = document.createElement("div");
@@ -24,8 +25,6 @@ function addProducts(produ) {
        </div>
        <div class="delivery">free delivery</div>
        <div class="offers">Bank offer</div>`;
-    //  product_card.appendChild(product_image);
-    //  product_card.appendChild(product_name)
     product_container.appendChild(product_card);
   });
 }
@@ -33,13 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
   addProducts(products);
 });
 
-//! todo Sorting the category
+//<-------------Sorting the category------------>
 let popularity = document.querySelector("#popularity");
 let lowToHigh = document.querySelector("#low_to_high");
 let highToLow = document.querySelector("#high_to_low");
 
 popularity.addEventListener("click", (e) => {
-  let arr = product.sort((a, b) => {
+  let arr = products.sort((a, b) => {
     a = a.popularity;
     b = b.popularity;
     return a - b;
@@ -49,7 +48,7 @@ popularity.addEventListener("click", (e) => {
 });
 
 lowToHigh.addEventListener("click", (e) => {
-  let arr = product.sort((a, b) => {
+  let arr = products.sort((a, b) => {
     a = a.price;
     b = b.price;
     return a - b;
@@ -59,7 +58,7 @@ lowToHigh.addEventListener("click", (e) => {
 });
 
 highToLow.addEventListener("click", (e) => {
-  let arr = product.sort((a, b) => {
+  let arr = products.sort((a, b) => {
     a = a.price;
     b = b.price;
     return b - a;
@@ -68,7 +67,7 @@ highToLow.addEventListener("click", (e) => {
   addProducts(arr);
 });
 
-//todo filter the category
+//<------------------------ filter the category-------->
 
 //filter data according discount
 let inputs = document.querySelectorAll(".dicount-category input");
@@ -80,7 +79,7 @@ function filterValueAccordingDiscount(e) {
     selectedValArrr = selectedValArrr.filter((val) => val != e.target.value);
   }
   console.log(selectedValArrr);
-  let filterArr = product.filter((el) => {
+  let filterArr = products.filter((el) => {
     return selectedValArrr.join(",").includes(el.discountPrice.toString());
   });
 
@@ -88,7 +87,7 @@ function filterValueAccordingDiscount(e) {
   if (selectedValArrr.length > 0) {
     addProducts(filterArr);
   } else {
-    addProducts(product);
+    addProducts(products);
   }
 }
 inputs.forEach((checkbox) => {
@@ -103,12 +102,12 @@ offerInputs.addEventListener("change", (e) => {
   console.log(e.target);
   product_container.innerHTML = "";
   if (e.target.checked) {
-    let filterArr = product.filter((el) => {
+    let filterArr = products.filter((el) => {
       return el.noCostEMI == true;
     });
     addProducts(filterArr);
   } else {
-    addProducts(product);
+    addProducts(products);
   }
 });
 
@@ -122,14 +121,14 @@ function filterValueAccordingRating(e) {
     ratingValArr = ratingValArr.filter((val) => val != e.target.value);
   }
   console.log(ratingValArr);
-  let filterArr = product.filter((el) => {
+  let filterArr = products.filter((el) => {
     return ratingValArr.join(",").includes(Math.floor(el.rating).toString());
   });
   product_container.innerHTML = "";
   if (ratingValArr.length > 0) {
     addProducts(filterArr);
   } else {
-    addProducts(product);
+    addProducts(products);
   }
 }
 ratingInputs.forEach((checkbox) => {
@@ -151,7 +150,7 @@ range.addEventListener("input", (e) => {
     minValue = 250;
   }
   document.querySelector("#max-price option").innerHTML = maxValue;
-  let filterArr = product.filter((el) => {
+  let filterArr = products.filter((el) => {
     return el.price >= minValue && el.price <= maxValue;
   });
   addProducts(filterArr);
@@ -168,7 +167,7 @@ filter_categories.forEach((ele) => {
   });
 });
 
-//!sign up and sign in pages js
+//<-----------sign up and sign in pages js----------->
 
 // for data for signUp and signIn page functionality
 let userName = document.querySelector(".userName");
@@ -285,3 +284,23 @@ document.querySelector("#signInBtn").addEventListener("click", (e) => {
     }
   }
 });
+
+// onclick on menu bar 
+let menubar = document.querySelector("#menu");
+let asideMenu = document.querySelector(".sidebar-divs-container");
+let closeBtn = document.querySelector("#closeBtn");
+menubar.addEventListener("click", (e)=>{
+  asideMenu.style.display = "block";
+  asideMenu.style.transition = "all 0.2s linear";
+  asideMenu.style.position = "absolute"
+  asideMenu.style.left = "0";
+  closeBtn.style.display = "block";
+})
+
+// onclick on closeBtn 
+closeBtn.addEventListener("click", closeAside)
+function closeAside() {
+  asideMenu.style.transition = "all 0.2s linear"
+  asideMenu.style.left = "-280px"
+  closeBtn.style.display = "none"
+}

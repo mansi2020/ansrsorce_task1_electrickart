@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>flipcart</title>
-
-    <!-- style sheet -->
+    <title>ElectricKart</title>
+    <!--------- style sheet --------------->
     <link rel="stylesheet" href="./style.css" />
-    
-    <!-- font awesome cdn link -->
+
+    <!-------------- font awesome cdn link ----------->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -18,8 +17,9 @@
     />
   </head>
   <body>
-    <!-- navbar -->
+    <!------------- navbar -------------->
     <nav>
+      <i class="fa-solid fa-bars" id="menu"></i>
       <div class="logo">
         <h1>ElectricKart</h1>
         <a href="#">
@@ -39,9 +39,13 @@
       <span>Become A Seller</span>
       <span>More</span>
       <span><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart </span>
+      <div class="small_device_icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-user"></i>
+      </div>
     </nav>
 
-    <!-- section for sign up and sign in-->
+    <!------ section for sign up and sign in-------------->
     <section class="signup_signin_container">
       <!-- sign up -->
       <div class="main_container" id="signupMainContainer">
@@ -50,9 +54,7 @@
           <img src="./assets/signup_isslu_wbsite.svg" alt="" id="signup_illu" />
           <h1>Welcome Back!</h1>
           <p>Enter your personal details to use all of site features</p>
-          <button id="signup_left_signin">
-            SIGN IN
-          </button>
+          <button id="signup_left_signin">SIGN IN</button>
         </div>
 
         <!-- sign up form right part-->
@@ -104,22 +106,20 @@
           <!-- <img src="./assets/signup_isslu_wbsite.svg" alt="" id="signup_illu" /> -->
           <h1>Hello, Friend!</h1>
           <p>Register with your personal details to use all of site features</p>
-          <button id="signup_right_signin">
-            SIGN UP
-          </button>
+          <button id="signup_right_signin">SIGN UP</button>
         </div>
       </div>
-      
     </section>
 
-    <!-- -----------side bar--------------- -->
+    <!------------- main body container------ -->
     <section class="main-body-container">
+      <!-- -----------side bar--------------- -->
       <section class="sidebar-divs-container">
         <div class="top_product"></div>
-
         <div class="filter">
           <div class="filter-basedon">
             <h2 class="fliter-heading">filters</h2>
+            <i class="fa-solid fa-xmark" id="closeBtn"></i>
           </div>
 
           <!-- ----------price-------------- -->
@@ -163,16 +163,6 @@
               </div>
             </article>
           </div>
-
-          <!-- <div class="flipcart-assured-category">
-            <div class="inputs">
-              <input type="checkbox" id="ISflipcartAssured" /><img
-                src="./assets/flipcartassured.png"
-                alt=""
-                class="flipcart_assured"
-              />
-            </div>
-          </div> -->
 
           <div class="offers-category">
             <span class="filter-category-head">Offers</span>
@@ -225,7 +215,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- ------------dom manipulation starts here--------- -->
         <section class="products_container">
           <!-- <div class="product_card">
@@ -252,14 +242,7 @@
       </section>
     </section>
 
-    <!-- footer -->
-    <div class="footer">
-  
-      <div class="copyright">
-        &copy; 2023 Electrickart. All Rights Reserved.
-      </div>
-    </div>
-
+    <!---------- javascript link ----------------------->
     <script src="./data.js"></script>
     <script src="./script.js"></script>
   </body>
