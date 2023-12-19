@@ -470,10 +470,11 @@ input:focus {
     display: flex;
     gap: 1rem;
   }
+  
   /* main body */
   .sidebar-divs-container {
     display: none;
-    width: 30%;
+    width: 70%;
   }
   .main-content-container {
     width: 100%;

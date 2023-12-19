@@ -72,7 +72,6 @@ highToLow.addEventListener("click", (e) => {
 //filter data according discount
 let inputs = document.querySelectorAll(".dicount-category input");
 function filterValueAccordingDiscount(e) {
-  console.log(selectedValArrr);
   let filterArr = products.filter((el) => {
     let discountPercentage = Math.round(100-(el.specialPrice/el.price)*(100));
     console.log(discountPercentage);
