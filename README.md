@@ -9,6 +9,7 @@ This repository contains code for the ElectricKart website—an e-commerce platf
 - [Features](#features)
 - [How to Use](#how-to-use)
 - [HTML Structure](#html-structure)
+- [CSS Styles](#css-styles)
 - [JavaScript Functionality](#javascript-functionality)
 
 
@@ -49,6 +50,32 @@ The `index.html` file includes structured sections:
 - Signup and signin sections: User authentication.
 - Main body sections: Displaying products.
 - JavaScript file references for functionality.
+
+[Back to Top](#electrickart-website)
+
+## CSS Styles
+
+#### Main Body
+- Layout and background color for the main body.
+
+#### Sidebar
+- Styles for width, background color, and padding.
+
+#### Main Content
+- Layout management and overflow handling.
+
+#### Product Cards
+- Styling for individual product display.
+
+#### Sign-in, Sign-up, and Product Details
+- **Signup_Signin_Container:** Layout control for sign-in, sign-up, and product detail sections.
+- **Form Styling:** Appearance management for input fields and buttons.
+
+#### Media Queries for Responsiveness
+- **Small Devices:** Max-width 767px adjustments.
+- **Medium Desktop Devices:** Styles for 768px to 1025px range.
+- **Large Desktop Devices:** Customizations for minimum width of 1024px.
+
 
 [Back to Top](#electrickart-website)
 
