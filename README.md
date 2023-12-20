@@ -35,10 +35,29 @@ ElectricKart is a responsive e-commerce website built with HTML, CSS, and JavaSc
 1. Clone the repository.
 2. Open the `index.html` file in your browser.
 
-### Usage:
+### User Interactions Guide
 
-1. **Authentication:** Sign up or sign in to access additional features.
-2. **Product Exploration:** Browse through product categories and use sorting/filtering options.
+1. **User Authentication:**
+   - Navigate to the navbar and select the "Sign Up" page.
+   - Complete the signup process or access the "Sign In" option if you have an existing account.
+
+2. **Product Sorting:**
+   - Sort products by popularity or price.
+   - Simply click on the corresponding category ("Popularity" or "Price") to rearrange the products accordingly.
+
+3. **Product Filtering:**
+   - Filter products based on different criteria:
+     - Customer rating
+     - Discounts
+     - Offers
+     - Price range
+   - Access these filters through the side menu to view specific product subsets.
+
+4. **Responsive Design:**
+   - Enable responsive view by clicking the menu button in the navbar.
+   - This reveals the side section details for easy access on smaller screens.
+
+
 
 
 [Back to Top](#electrickart-website)
