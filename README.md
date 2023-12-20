@@ -25,6 +25,7 @@ ElectricKart is a responsive e-commerce website built with HTML, CSS, and JavaSc
 - Sign-up and sign-in pages for user authentication.
 - Main body section displaying product cards.
 - Sorting and filtering options for products.
+- Add search features using throttling concept.
 
 [Back to Top](#electrickart-website)
 
@@ -36,16 +37,19 @@ ElectricKart is a responsive e-commerce website built with HTML, CSS, and JavaSc
 2. Open the `index.html` file in your browser.
 
 ### User Interactions Guide
+![electriccart_features](https://github.com/mansi2020/ansrsorce_task1_electrickart/assets/57188328/a64e36a5-1619-4f18-af04-113311318ca3)
 
 1. **User Authentication:**
+   ![image](https://github.com/mansi2020/ansrsorce_task1_electrickart/assets/57188328/8891af57-c020-4617-8ac1-e0a45f449f83)
    - Navigate to the navbar and select the "Sign Up" page.
    - Complete the signup process or access the "Sign In" option if you have an existing account.
 
-2. **Product Sorting:**
+3. **Product Sorting:**
+   
    - Sort products by popularity or price.
    - Simply click on the corresponding category ("Popularity" or "Price") to rearrange the products accordingly.
 
-3. **Product Filtering:**
+5. **Product Filtering:**
    - Filter products based on different criteria:
      - Customer rating
      - Discounts
@@ -53,7 +57,7 @@ ElectricKart is a responsive e-commerce website built with HTML, CSS, and JavaSc
      - Price range
    - Access these filters through the side menu to view specific product subsets.
 
-4. **Responsive Design:**
+6. **Responsive Design:**
    - Enable responsive view by clicking the menu button in the navbar.
    - This reveals the side section details for easy access on smaller screens.
 
