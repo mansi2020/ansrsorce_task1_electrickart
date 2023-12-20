@@ -544,7 +544,7 @@ input:focus {
 }
 
 /*<------------------------------------media query for large desktop device------------------------------> */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   nav {
     gap: 30px;
   }
