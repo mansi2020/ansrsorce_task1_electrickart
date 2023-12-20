@@ -297,3 +297,35 @@ function closeAside() {
   asideMenu.style.left = "-280px";
   closeBtn.style.display = "none";
 }
+
+//<---------search things using throttling-------------
+
+let timerId;
+function performSearch(query) {
+    // Logic to perform the search based on the query
+    let filterArray = products.filter((item)=>{
+      let lowerCaseTitle = item.title.toLowerCase();
+        return lowerCaseTitle.includes(query.toLowerCase());
+    })
+    product_container.innerHTML = ""; 
+    console.log(filterArray);
+    if(filterArray.length > 0){
+      addProducts(filterArray);
+      console.log("yes greter");
+    }else{
+      addProducts(products);
+    }
+}
+
+function handleSearchInput(event) {
+    const query = event.target.value;
+    clearTimeout(timerId);
+    timerId = setTimeout(() => {
+        performSearch(query);
+    }, 1000);
+}
+
+// get input when user search products
+const searchData = document.querySelector('.searchbox input');
+console.log(searchData);
+searchData.addEventListener('input', handleSearchInput);

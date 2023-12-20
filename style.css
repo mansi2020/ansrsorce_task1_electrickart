@@ -81,6 +81,9 @@ nav {
   outline: none;
   width: 500px;
 }
+.searchbox input:focus{
+  border:none;
+}
 .searchbox i {
   color: var(--blue-color);
 }
@@ -435,8 +438,8 @@ input:focus {
 
 /* default display: none container */
 #signInContainer,
-#signupMainContainer,
-.signup_signin_container {
+#signinMainContainer,
+.main-body-container {
   display: none;
 }
 
@@ -447,7 +450,7 @@ input:focus {
 }
 
 /*<------------------------------------media query for small device------------------------------> */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   /* nav */
   body {
     overflow-y: auto;
@@ -497,17 +500,32 @@ input:focus {
     margin-top: 12px;
     gap: 10px;
   }
+  .form_container {
+    width: 100%;
+  }
+  .main_container {
+    flex-direction: column;
+  }
+  .signup_signin_container {
+    height: auto;
+  }
+  .form_container_right {
+    text-align: center;
+  }
+  .profile-button {
+    display: none;
+  }
 }
 
 /*<------------------------------------media query for mediuam desktop device------------------------------> */
-@media screen and (min-width: 768px) and (max-width: 1025px) {
+@media screen and (min-width: 769px) and (max-width: 1025px) {
   /* nav */
   body {
     overflow-y: auto;
   }
   nav {
     justify-content: space-between;
-    height: 60px;
+    height: 80px;
     padding: 0.2rem 4rem;
     position: sticky;
     top: 0;
@@ -540,6 +558,12 @@ input:focus {
   }
   .main-body-container {
     height: auto;
+  }
+  .form_container {
+    width: 100%;
+  }
+  .profile-button {
+    display: none;
   }
 }
 
