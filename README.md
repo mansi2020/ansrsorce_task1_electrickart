@@ -1,6 +1,6 @@
 
 # ElectricKart Website
-
+ 
 Hosted link :<a href="https://ansrsorce-task1-electrickart.vercel.app/">click here</a>
 
 This repository contains code for the ElectricKart website—an e-commerce platform showcasing various products with user authentication features.
